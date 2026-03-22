@@ -16,7 +16,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed z-10 top-0 w-full h-20 transition-all duration-300 ${
+      className={`fixed z-20 top-0 w-full h-20 transition-all duration-300 ${
         scroll ? "backdrop-blur-lg bg-white/70 shadow-md" : "bg-transparent"
       }`}
     >
@@ -51,11 +51,11 @@ const Nav = () => {
         </a>
 
         {/* Menu */}
-        <ul className="flex gap-10 text-lg font-medium items-center">
+        <ul className="flex gap-10 text-lg font-medium items-center scroll-smooth">
           {["Home", "About", "Education", "Experiences", "Projects"].map(
             (item) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="group capitalize">
+                <a href={`#${item}`} className="group capitalize">
                   {item}
                   <div className="h-[2px] w-0 bg-teal-500 group-hover:w-full transition-all duration-500" />
                 </a>
