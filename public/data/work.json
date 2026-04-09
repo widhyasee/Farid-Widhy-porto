@@ -1,0 +1,22 @@
+{
+  "work": [
+    {
+      "id": 1,
+      "title": "System Implementor intern",
+      "employment": "Internship",
+      "company": "Audy Dental, Jakarta",
+      "stardate": [{ "month": "March", "year": "2025" }],
+      "enddate": [{ "month": "May", "year": "2025" }],
+      "description": "Analyzed business requirements, prepared documentation/SOPs, and performed initial software setup including data input and user access configuration."
+    },
+    {
+      "id": 2,
+      "title": "Access Data Management intern",
+      "employment": "Internship",
+      "company": "Telkom Indonesia, Jakarta",
+      "stardate": [{ "month": "December", "year": "2023" }],
+      "enddate": [{ "month": "February", "year": "2024" }],
+      "description": "Managed data on the Proman website for ODP service disruptions, prepared justification for goods/services, and created Project IDs for recaps."
+    }
+  ]
+}

@@ -52,16 +52,14 @@ const Nav = () => {
 
         {/* Menu */}
         <ul className="flex gap-10 text-lg font-medium items-center scroll-smooth">
-          {["Home", "About", "Education", "Experiences", "Projects"].map(
-            (item) => (
-              <li key={item}>
-                <a href={`#${item}`} className="group capitalize">
-                  {item}
-                  <div className="h-[2px] w-0 bg-teal-500 group-hover:w-full transition-all duration-500" />
-                </a>
-              </li>
-            ),
-          )}
+          {["Home", "About", "Experiences", "Projects"].map((item) => (
+            <li key={item}>
+              <a href={`#${item.toLowerCase()}`} className="group capitalize">
+                {item}
+                <div className="h-[2px] w-0 bg-teal-500 group-hover:w-full transition-all duration-500" />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

@@ -1,0 +1,22 @@
+{
+  "organization": [
+    {
+      "id": 1,
+      "title": "Vice Chairman",
+      "employment": "UKM Basket Veteran Jakarta",
+      "company": "UPN Veteran Jakarta",
+      "stardate": [{ "month": "January", "year": "2024" }],
+      "enddate": [{ "month": "December", "year": "2024" }],
+      "description": "Assisted in strategic operations, coordinated teamwork across divisions, and supervised basketball tournaments and internal training sessions."
+    },
+    {
+      "id": 2,
+      "title": "Head of Human Resources Development (HRD) Division",
+      "employment": "KSM Cyber Security UPNVJ",
+      "company": "UPN Veteran Jakarta",
+      "stardate": [{ "month": "January", "year": "2024" }],
+      "enddate": [{ "month": "December", "year": "2024" }],
+      "description": "Led the HRD division, coordinated recruitment and onboarding for new members, and designed training programs for technical skills."
+    }
+  ]
+}

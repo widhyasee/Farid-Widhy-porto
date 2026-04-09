@@ -1,0 +1,13 @@
+{
+  "education": [
+    {
+      "id": 1,
+      "title": "FreshGraduate Faculty of Computer Science",
+      "employment": "GPA 3.74 / 4.00",
+      "company": "Universitas Pembangunan Nasional Veteran Jakarta",
+      "stardate": [{ "month": "August", "year": "2021" }],
+      "enddate": [{ "month": "June", "year": "2025" }],
+      "description": "Focused on Informatics with a thesis titled 'Implementation of an NLP-Based Chatbot on a Website: A Case Study of Uniqkids Autism Clinic'"
+    }
+  ]
+}

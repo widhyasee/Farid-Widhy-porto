@@ -4,7 +4,10 @@ import { ArrowRight } from "lucide-react";
 
 const Header = () => {
   return (
-    <section className="flex justify-center items-center font-poppins bg-slate-50">
+    <section
+      className="flex justify-center items-center font-poppins bg-slate-50"
+      id="home"
+    >
       <div className="h-screen w-full flex flex-col justify-center items-center px-4">
         {/* Headline */}
         <div className="text-5xl md:text-7xl font-bold mb-6 text-center leading-tight">

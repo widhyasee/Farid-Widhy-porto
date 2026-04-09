@@ -3,11 +3,8 @@ import personImage from "../assets/img/person.jpg";
 
 const About = () => {
   return (
-    <section
-      className="w-full py-10 bg-gradient-to-br from-teal-500 to-emerald-70"
-      id="About"
-    >
-      <div className="container mx-auto p-10 bg-white rounded-2xl">
+    <section className="w-full py-10 bg-grey-200" id="about">
+      <div className="container mx-auto p-10 bg-white rounded-2xl shadow-2xl">
         <div className="flex gap-3">
           <div className="flex-1 flex justify-center items-center">
             <img src={personImage} alt="" className="h-120 w-auto rounded-xl" />
