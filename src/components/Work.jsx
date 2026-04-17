@@ -32,26 +32,33 @@ const Work = () => {
     );
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8">
       {data.map((item) => (
-        <div key={item.id} className="relative pl-8 border-l-2 border-teal-500">
-          <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-teal-500" />
+        <div
+          key={item.id}
+          className="relative pl-6 sm:pl-8 border-l-2 border-teal-500 transition-all duration-300 hover:translate-x-1"
+        >
+          <div className="absolute -left-[7px] sm:-left-[9px] top-1 sm:top-0 w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-teal-500" />
 
           <div className="flex flex-col md:flex-row md:justify-between mb-2">
             <div>
-              <h3 className="text-2xl font-bold text-gray-800">{item.title}</h3>
-              <p className="text-teal-600 font-semibold">
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-800">
+                {item.title}
+              </h3>
+              <p className="text-sm sm:text-base text-teal-600 font-semibold">
                 {item.company} · {item.employment}
               </p>
             </div>
 
-            <div className="text-gray-500 italic mt-1 md:mt-0">
+            <div className="text-xs sm:text-sm md:text-base text-gray-500 italic mt-1 md:mt-0">
               {item.stardate[0].month} {item.stardate[0].year} -
               {item.enddate[0].month} {item.enddate[0].year}
             </div>
           </div>
 
-          <p className="text-gray-600 leading-relaxed">{item.description}</p>
+          <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            {item.description}
+          </p>
         </div>
       ))}
     </div>
