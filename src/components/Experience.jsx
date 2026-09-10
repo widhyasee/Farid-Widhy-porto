@@ -1,60 +1,58 @@
-import { Link, Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import Organization from "./Oragnization";
-import Education from "./Education";
-import Work from "./Work";
+import SectionHeading from "./ui/SectionHeading";
+import Timeline from "./ui/Timeline";
+
+const tabs = [
+  { key: "work", label: "Work", endpoint: "/data/work.json", dataKey: "work" },
+  {
+    key: "organization",
+    label: "Organizations",
+    endpoint: "/data/organization.json",
+    dataKey: "organization",
+  },
+  {
+    key: "education",
+    label: "Education",
+    endpoint: "/data/education.json",
+    dataKey: "education",
+  },
+];
 
 const Experience = () => {
-  const [activeMenu, setActiveMenu] = useState("organization");
+  const [activeTab, setActiveTab] = useState("work");
 
-  const handleClick = (menuName) => {
-    setActiveMenu(menuName);
-  };
+  const current = tabs.find((tab) => tab.key === activeTab);
 
   return (
-    <section className="w-full py-10 mb-10 bg-slate-100" id="experiences">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-2xl p-5 sm:p-8 md:p-10 shadow-2xl bg-white transition-shadow duration-300 hover:shadow-[0_20px_60px_-20px_rgba(15,23,42,0.35)]">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">
-            My Experience
-          </h2>
+    <section id="experience" className="py-20 sm:py-28">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="reveal">
+          <SectionHeading
+            label="Experience"
+            title="My Background"
+          />
 
-          <div className="flex justify-center mb-8">
-            <div className="w-full max-w-2xl grid grid-cols-3 gap-2 sm:gap-4 bg-slate-50 rounded-2xl p-3 shadow-lg text-sm sm:text-base md:text-lg">
-              {["work", "organization", "education"].map((item) => (
-                <Link
-                  key={item}
-                  to={item}
-                  onClick={() => handleClick(item)}
-                  className="group capitalize cursor-pointer flex flex-col items-center rounded-lg py-2 transition-colors duration-300 hover:bg-white"
-                >
-                  <span
-                    className={`transition-colors duration-300 ${
-                      activeMenu === item
-                        ? "text-teal-600 font-semibold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    {item}
-                  </span>
-
-                  <div
-                    className={`h-[2px] bg-teal-500 transition-all duration-500 ${
-                      activeMenu === item ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                  />
-                </Link>
-              ))}
-            </div>
+          {/* Tabs */}
+          <div className="flex gap-1 p-1 bg-slate-100 rounded-lg w-fit mb-10">
+            {tabs.map((tab) => (
+              <button
+                key={tab.key}
+                type="button"
+                onClick={() => setActiveTab(tab.key)}
+                className={`px-5 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+                  activeTab === tab.key
+                    ? "bg-white text-teal-600 shadow-sm"
+                    : "text-slate-500 hover:text-slate-700"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
 
-          <div className="bg-gray-100 p-4 sm:p-6 md:p-8 rounded-xl min-h-[300px] transition-colors duration-300">
-            <Routes>
-              <Route index element={<Organization />} />
-              <Route path="organization" element={<Organization />} />
-              <Route path="work" element={<Work />} />
-              <Route path="education" element={<Education />} />
-            </Routes>
+          {/* Content */}
+          <div className="bg-slate-50/50 border border-slate-100 rounded-xl p-6 sm:p-8">
+            <Timeline endpoint={current.endpoint} dataKey={current.dataKey} />
           </div>
         </div>
       </div>
