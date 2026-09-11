@@ -2,15 +2,24 @@
   "work": [
     {
       "id": 1,
+      "title": "Software Quality Assurance",
+      "employment": "Internship",
+      "company": "Privy ID",
+      "stardate": [{ "month": "August", "year": "2026" }],
+      "enddate": [{ "month": "Current", "year": "" }],
+      "description": ""
+    },
+    {
+      "id": 2,
       "title": "IT Asset Management",
       "employment": "Internship",
       "company": "PT Bank Sinarmas Tbk",
       "stardate": [{ "month": "February", "year": "2026" }],
-      "enddate": [{ "month": "Current", "year": "" }],
+      "enddate": [{ "month": "August", "year": "2026" }],
       "description": "Responsible for tracking and managing the lifecycle of IT hardware and software assets across the organization. Ensuring data accuracy in the asset management system, conducting regular inventory audits, and coordinating with various departments to optimize resource allocation and maintain operational efficiency within the banking environment."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "System Implementor intern",
       "employment": "Internship",
       "company": "Audy Dental, Jakarta",
@@ -19,7 +28,7 @@
       "description": "Analyzed business requirements, prepared documentation/SOPs, and performed initial software setup including data input and user access configuration."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Access Data Management intern",
       "employment": "Internship",
       "company": "Telkom Indonesia, Jakarta",
